@@ -9,6 +9,7 @@ class Program
         int sum = 0;
         List<int> numbers;
         numbers = new List<int>();
+
         while (userInput != 0)
         {
             Console.Write("Enter number: ");
@@ -56,6 +57,6 @@ class Program
             Console.WriteLine("No positive numbers were entered.");
         }
         numbers.Sort();
-        Console.WriteLine(numbers);
+        Console.WriteLine(string.Join(", ", numbers));
     }
 }
