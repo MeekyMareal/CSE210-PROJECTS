@@ -7,6 +7,7 @@ class Program
         Console.Write("What is your grade? ");
         string userInput = Console.ReadLine();
         string letter = "";
+        string sign = "";
         int grade = int.Parse(userInput);
         if (grade >= 90)
         {
@@ -29,7 +30,20 @@ class Program
             letter = "F";
         }
 
-        Console.WriteLine($"Your grade is: {letter}");
+        if (letter == "A" || letter == "B" || letter == "C" && grade > 95)
+        {
+            sign = "+";
+        }
+        else if (letter == "A" || letter == "B" || letter == "C" && grade < 95)
+        {
+            sign = "-";
+        }
+        else
+        {
+            sign = "";
+        }
+
+        Console.WriteLine($"Your grade is: {letter}{sign}");
 
         if (grade >= 70)
         {
